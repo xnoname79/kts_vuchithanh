@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIẾN TRÚC SƯ - Biên Niên Sử Vũ Chí Thành</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="magazine-wrapper">
+        <header class="magazine-header">
+            <div class="magazine-masthead">
+                <div class="issue-info">
+                    <span class="volume">VOL. 15</span>
+                    <span class="issue">ISSUE 01</span>
+                    <span class="year">2024</span>
+                </div>
+                <h1 class="magazine-title">KIẾN TRÚC SƯ</h1>
+                <div class="subtitle">Biên Niên Sử Kiến Trúc</div>
+            </div>
+        </header>
+
+        <main class="magazine-content">
+            <!-- Magazine Cover Story -->
+            <section class="cover-story">
+                <div class="cover-layout">
+                    <div class="cover-image">
+                        <div class="image-placeholder cover-photo">
+                            <span>Portrait in Studio</span>
+                        </div>
+                        <div class="photo-credit">Photography by Architectural Digest</div>
+                    </div>
+                    <div class="cover-text">
+                        <div class="story-meta">
+                            <span class="story-category">BÀI CHÍNH</span>
+                            <span class="page-number">TRANG 08</span>
+                        </div>
+                        <h1 class="cover-headline">Thơ Ca Của Không Gian</h1>
+                        <h2 class="cover-subhead">Cách Vũ Chí Thành biến đổi bê tông và thép thành những cảnh quan cảm xúc</h2>
+                        <div class="story-intro">
+                            <p class="dropcap">
+                                Trong một góc yên tĩnh của Thành phố Hồ Chí Minh, nơi ánh sáng buổi sáng lọc qua 
+                                những tán cây me trăm tuổi, Vũ Chí Thành phác họa tương lai. Cây bút chì di chuyển 
+                                với độ chính xác của một bác sĩ phẫu thuật, đam mê của một thi sĩ. Trong mười lăm năm qua, 
+                                kiến trúc sư khiêm tốn này đã định nghĩa lại ý nghĩa của việc sinh sống trong không gian.
+                            </p>
+                            <p>
+                                "Kiến trúc là âm nhạc đông cứng," anh nói, trích dẫn Goethe trong khi chỉ về 
+                                tác phẩm mới nhất có thể nhìn thấy qua cửa sổ studio. "Nhưng tôi thích nghĩ về 
+                                nó như cảm xúc được thu gọn—mỗi tòa nhà chứa đựng cảm xúc của những người sẽ sống, 
+                                làm việc và mơ ước trong những bức tường đó."
+                            </p>
+                        </div>
+                        <div class="continue-reading">
+                            <span>Tiếp tục đọc tại trang 12</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table of Contents -->
+            <section class="table-of-contents">
+                <div class="toc-layout">
+                    <div class="toc-header">
+                        <h2>Trong Số Này</h2>
+                        <div class="issue-date">Xuân 2024</div>
+                    </div>
+                    <div class="toc-columns">
+                        <div class="toc-section">
+                            <h3>BÀI CHÍNH</h3>
+                            <div class="toc-item">
+                                <span class="toc-title">Thơ Ca Của Không Gian</span>
+                                <span class="toc-page">08</span>
+                            </div>
+                            <div class="toc-item">
+                                <span class="toc-title">Khi Bê Tông Mơ Ước</span>
+                                <span class="toc-page">14</span>
+                            </div>
+                            <div class="toc-item">
+                                <span class="toc-title">Những Khu Vườn Trên Trời</span>
+                                <span class="toc-page">22</span>
+                            </div>
+                        </div>
+                        <div class="toc-section">
+                            <h3>CÂU CHUYỆN</h3>
+                            <div class="toc-item">
+                                <span class="toc-title">Người Thầm Thủ Di Sản</span>
+                                <span class="toc-page">28</span>
+                            </div>
+                            <div class="toc-item">
+                                <span class="toc-title">Không Gian Chữa Lành</span>
+                                <span class="toc-page">34</span>
+                            </div>
+                            <div class="toc-item">
+                                <span class="toc-title">Thư Gửi Kiến Trúc Sư Trẻ</span>
+                                <span class="toc-page">40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Story 1: When Concrete Dreams -->
+            <article class="feature-story" id="story-1">
+                <div class="story-header">
+                    <div class="story-meta">
+                        <span class="story-category">DỰ ÁN NỔI BẬT</span>
+                        <span class="page-number">TRANG 14</span>
+                    </div>
+                    <h1 class="story-headline">Khi Bê Tông Mơ Ước</h1>
+                    <h2 class="story-subhead">Căn Hộ Vườn Trời: Bức thư tình gửi cuộc sống thẳng đứng</h2>
+                </div>
+                
+                <div class="story-layout">
+                    <div class="story-image-main">
+                        <div class="image-placeholder feature-large">
+                            <span>Sky Gardens at Sunset</span>
+                        </div>
+                        <div class="photo-caption">
+                            "Mỗi ban công trở thành một khu vườn bí mật, một ốc đảo riêng tư lơ lững giữa đất và trời" — VCT
+                        </div>
+                    </div>
+                    
+                    <div class="story-content">
+                        <div class="story-text">
+                            <p class="dropcap">
+                                Khách hàng gọi điện vào một sáng thứ Ba năm 2023, giọng nói mang theo áp lực 
+                                của những giấc mơ bất khả thi. "Tôi muốn sống trong một khu vườn," cô ấy nói, "nhưng tôi cần 
+                                ở trong thành phố." Với hầu hết các kiến trúc sư, đây sẽ là một mâu thuẫn. Với Vũ Chí Thành, 
+                                đó là một bức thư tình đang chờ được viết bằng bê tông và thép.
+                            </p>
+                            
+                            <div class="pullquote">
+                                <p>"Mỗi giấc mơ bất khả thi chỉ là kiến trúc đang chờ được hiện thực"</p>
+                                <cite>— Vũ Chí Thành</cite>
+                            </div>
+                            
+                            <p>
+                                Căn Hộ Vườn Trời xuất hiện từ cuộc hội thoại này như chú phượng hoàng từ những 
+                                ràng buộc đô thị. Thành đã dành nhiều tháng đi bộ qua khu đất chật hẹp, cảm nhận 
+                                các dòng gió, quan sát cách ánh sáng di chuyển qua các tòa nhà lân cận. "Kiến trúc là 
+                                việc lắng nghe," anh giải thích, "lắng nghe mảnh đất, những nhu cầu không nói ra của khách hàng, 
+                                những tiếng thầm thì của khả năng."
+                            </p>
+                            
+                            <p>
+                                Thứ xuất hiện đã thách thức quy ước: một tòa tháp 12 tầng nơi mỗi căn hộ mở ra 
+                                khu vườn riêng của mình. Các trang trại thẳng đứng đổ xuống mặt nam của tòa nhà, 
+                                tạo ra một mặt tiền sống động, thở thay đổi theo mùa. Các tấm pin mặt trời 
+                                được ngụy trang thành các thiết bị nghệ thuật động trên đỉnh công trình, trong khi 
+                                hệ thống thu thập nước mưa nuôi dưỡng đời sống thực vật phong phú.
+                            </p>
+                        </div>
+                        
+                        <div class="story-sidebar">
+                            <div class="sidebar-item">
+                                <h4>Chi Tiết Dự Án</h4>
+                                <ul>
+                                    <li>Vị trí: Quận 1, TP.HCM</li>
+                                    <li>Hoàn thành: 2024</li>
+                                    <li>Căn hộ: 36 căn</li>
+                                    <li>Vườn: 48 sân hiên riêng</li>
+                                    <li>Giải thưởng: LEED Platinum</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="sidebar-quote">
+                                <blockquote>
+                                    "Sống ở đây giống như lơ lững trong một ngôi nhà trên cây. Thành phố trở thành 
+                                    nhạc nền cho bản giao hưởng của những thứ đang sinh trưởng."
+                                </blockquote>
+                                <cite>— Maria Chen, Cư dân</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-images-grid">
+                    <div class="image-placeholder story-img">
+                        <span>Interior Garden View</span>
+                    </div>
+                    <div class="image-placeholder story-img">
+                        <span>Rooftop Community Space</span>
+                    </div>
+                    <div class="image-placeholder story-img">
+                        <span>Vertical Farm Detail</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Feature Story 2: The Heritage Whisperer -->
+            <article class="feature-story heritage-story" id="story-2">
+                <div class="story-header">
+                    <div class="story-meta">
+                        <span class="story-category">BẢO TỒN VĂN HÓA</span>
+                        <span class="page-number">TRANG 28</span>
+                    </div>
+                    <h1 class="story-headline">Người Thầm Thủ Di Sản</h1>
+                    <h2 class="story-subhead">Kiến trúc sư học cách nói chuyện với ma quỗ</h2>
+                </div>
+                
+                <div class="heritage-layout">
+                    <div class="heritage-intro">
+                        <p class="dropcap">
+                            Trong trái tim Hội An, nơi những viên đá cổ nhớ những bước chân của thương gia lụa 
+                            và thực dân Pháp, Vũ Chí Thành thực hiện một loại phép thuật. Anh lắng nghe các tòa nhà 
+                            theo cách người khác nghe nhạc, nghe câu chuyện trong mỗi vết nứt, mỗi chiết dầm phong sương, 
+                            mỗi vết sơn phai màu.
+                        </p>
+                    </div>
+                    
+                    <div class="heritage-story-grid">
+                        <div class="heritage-text">
+                            <p>
+                                "Restoration is not about returning to the past," Thanh explains while running his 
+                                fingers along a 200-year-old wooden pillar. "It's about creating a bridge between 
+                                yesterday and tomorrow, allowing history to continue its conversation with the present."
+                            </p>
+                            
+                            <p>
+                                His approach to the Heritage Arts Center restoration became legendary among 
+                                preservation circles. Where others saw decay, he saw potential. Where others wanted 
+                                to rebuild, he chose to heal. The project took three years and required techniques 
+                                learned from master craftsmen whose fathers had built these very walls.
+                            </p>
+                            
+                            <div class="heritage-quote">
+                                <blockquote>
+                                    "Every old building teaches you something new about respect"
+                                </blockquote>
+                            </div>
+                        </div>
+                        
+                        <div class="heritage-image">
+                            <div class="image-placeholder heritage-main">
+                                <span>Before & After Restoration</span>
+                            </div>
+                            <div class="photo-caption">
+                                Trung Tâm Nghệ Thuật Di Sản: Nơi nghề thủ công thế kỷ 18 gặp gỡ chức năng thế kỷ 21
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Featured Projects Showcase -->
+            <section class="projects-showcase" id="projects">
+                <div class="projects-header">
+                    <div class="story-meta">
+                        <span class="story-category">DỰ ÁN NỔI BẬT</span>
+                        <span class="page-number">TRANG 32</span>
+                    </div>
+                    <h1 class="projects-headline">Câu Chuyện Kiến Trúc</h1>
+                    <h2 class="projects-subhead">Nơi tầm nhìn gặp gỡ thực tế trong bê tông và giấc mơ</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Sky Gardens Residence -->
+                    <article class="project-card featured-project">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Căn Hộ Vườn Trời</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Căn Hộ Vườn Trời</h3>
+                                    <p>Nơi cuộc sống đô thị gặp gỡ vòng tay thiên nhiên</p>
+                                    <span class="project-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Khu Dân Cư</span>
+                                <span class="project-location">Quận 1, TP.HCM</span>
+                            </div>
+                            <h3 class="project-title">Sống Giữa Mây Trời</h3>
+                            <p class="project-description">
+                                Một minh chứng 12 tầng cho việc làm vườn thẳng đứng, nơi mỗi căn hộ mở ra 
+                                ốc đảo riêng của mình. Dự án này thách thức thiết kế nhà cao tầng truyền thống 
+                                bằng cách tích hợp thiên nhiên ở mọi tầng, tạo ra một mặt tiền thở, sống động 
+                                thay đổi theo mùa.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">36</span>
+                                    <span class="highlight-label">Căn Hộ</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">48</span>
+                                    <span class="highlight-label">Khu Vườn</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">100%</span>
+                                    <span class="highlight-label">Năng Lượng Mặt Trời</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Heritage Arts Center -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Trung Tâm Nghệ Thuật Di Sản</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Trung Tâm Nghệ Thuật Di Sản</h3>
+                                    <p>Thổ hồn mới vào những bức tường cổ kính</p>
+                                    <span class="project-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Phục Hồi Văn Hóa</span>
+                                <span class="project-location">Hội An</span>
+                            </div>
+                            <h3 class="project-title">Tiếng Thầm Thì Quá Khứ</h3>
+                            <p class="project-description">
+                                Ngôi nhà của thương gia lụa 200 năm tuổi được biến thành trung tâm nghệ thuật đương đại 
+                                trong khi vẫn bảo tồn từng chiết dầm phong sương và chi tiết chạm khắc. Việc phục hồi này 
+                                trở thành sự chiêm niệm về thời gian, nghề thủ công và những câu chuyện mà các tòa nhà đựng nên.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">200</span>
+                                    <span class="highlight-label">Năm Tuổi</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">3</span>
+                                    <span class="highlight-label">Năm Phục Hồi</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">15</span>
+                                    <span class="highlight-label">Thầy Thủ Công</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Floating Café -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Quán Cà Phê Nổi Mê Kông</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Quán Cà Phê Nổi Mê Kông</h3>
+                                    <p>Kiến trúc chảy theo dòng sông</p>
+                                    <span class="project-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Thương Mại</span>
+                                <span class="project-location">Cần Thơ</span>
+                            </div>
+                            <h3 class="project-title">Khúa Với Đồng Bằng</h3>
+                            <p class="project-description">
+                                Được xây trên cọc trên vòng tay Mê Kông, quán cà phê này lên xuống theo 
+                                tâm trạng của dòng sông. Tre và thép tạo ra cuộc đối thoại giữa truyền thống 
+                                và đổi mới, trong khi công trình thở theo lớp nước bên dưới.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">100%</span>
+                                    <span class="highlight-label">Bền Vững</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">150</span>
+                                    <span class="highlight-label">Sức Chứa</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">360°</span>
+                                    <span class="highlight-label">Tầm Nhìn Sông</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Zen Meditation Center -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Trung Tâm Thiền Zen</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Trung Tâm Thiền Zen</h3>
+                                    <p>Kiến trúc là con đường đến bình an nội tâm</p>
+                                    <span class="project-year">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Tâm Linh</span>
+                                <span class="project-location">Đà Lạt</span>
+                            </div>
+                            <h3 class="project-title">Sự Yên Lặng Trong Đá</h3>
+                            <p class="project-description">
+                                Nằm trong những dãy núi sương mù của Đà Lạt, trung tâm thiền này thể hiện sự thiền tĩnh 
+                                qua thiết kế tối giản. Mỗi đường nét, mỗi bóng râm, mỗi không gian giữa chúng nói lên 
+                                nhu cầu tĩnh lặng của tâm hồn trong thế giới hỗn loạn này.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">7</span>
+                                    <span class="highlight-label">Phòng Thiền</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">500</span>
+                                    <span class="highlight-label">Lượt Khách/Ngày</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">0</span>
+                                    <span class="highlight-label">Dấu Chân Carbon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Urban Market -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Chợ Trung Tâm Sài Gòn</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Chợ Trung Tâm Sài Gòn</h3>
+                                    <p>Nơi thương mại gặp gỡ cộng đồng</p>
+                                    <span class="project-year">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Thương Mại</span>
+                                <span class="project-location">Quận 3, TP.HCM</span>
+                            </div>
+                            <h3 class="project-title">Trái Tim Thương Mại</h3>
+                            <p class="project-description">
+                                Một cách hiểu hiện đại về những khu chợ truyền thống Việt Nam, không gian này tôn vinh 
+                                năng lượng của thương mại đồng thời mang lại phẩm giá cho người bán hàng và sự tiện ích 
+                                cho khách hàng. Những đường mái chảy phản ánh sự hỗn loạn và vẻ đẹp của cuộc sống đường phố.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">200</span>
+                                    <span class="highlight-label">Gông Hàng</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">5000</span>
+                                    <span class="highlight-label">Khách/Ngày</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">24/7</span>
+                                    <span class="highlight-label">Hoạt Động</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Tech Campus -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-img">
+                                <span>Trường Đại học Đổi Mới</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Trường Đại học Đổi Mới</h3>
+                                    <p>Nơi sáng tạo và công nghệ hội tụ</p>
+                                    <span class="project-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-story">
+                            <div class="project-meta">
+                                <span class="project-type">Doanh Nghiệp</span>
+                                <span class="project-location">TP. Thủ Đức</span>
+                            </div>
+                            <h3 class="project-title">Tương Lai, Hiện Tại</h3>
+                            <p class="project-description">
+                                Một trường đại học công nghệ làm mờ nhạt ranh giới giữa công việc và cuộc sống, bên trong và 
+                                bên ngoài. Các không gian thích ứng chảy như thuật toán, tự định hình lại cho 
+                                sự hợp tác, tập trung và những khoảnh khắc đổi mới bất ngờ.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">50</span>
+                                    <span class="highlight-label">Công Ty</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">2000</span>
+                                    <span class="highlight-label">Nhân Viên</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">∞</span>
+                                    <span class="highlight-label">Khả Năng</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-philosophy">
+                    <div class="philosophy-content">
+                        <h3>Kiến Trúc Của Câu Chuyện</h3>
+                        <p class="philosophy-text">
+                            Mỗi dự án kể một câu chuyện—không chỉ về vật liệu và phương pháp, mà về những giấc mơ được 
+                            thể hiện. Những tòa nhà này không chỉ đơn thuần chứa đựng các hoạt động; chúng nuôi dưỡng trải nghiệm, 
+                            thúc đẩy kết nối và tạo ra bối cảnh cho vô số câu chuyện con người chưa được triển khai.
+                        </p>
+                        <blockquote class="philosophy-quote">
+                            "Tôi không thiết kế tòa nhà. Tôi thiết kế những cái hộp chứa giấc mơ con người."
+                            <cite>— Vũ Chí Thành</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Essay: Letters to Young Architects -->
+            <article class="personal-essay" id="essay">
+                <div class="essay-header">
+                    <div class="story-meta">
+                        <span class="story-category">TIỂU LUẬN CÁ NHÂN</span>
+                        <span class="page-number">TRANG 40</span>
+                    </div>
+                    <h1 class="essay-headline">Thư Gửi Kiến Trúc Sư Trẻ</h1>
+                    <h2 class="essay-subhead">Những điều tôi ước ai đó đã nói với tôi khi tốt nghiệp</h2>
+                </div>
+                
+                <div class="essay-content">
+                    <div class="essay-text">
+                        <p class="dropcap">
+                            Kiến trúc sư trẻ thân mến, bạn là người thức đến 3 giờ sáng để hoàn thiện phối cảnh, 
+                            người thấy thơ ca trong bê tông và bản giao hưởng trong thép—lá thư này dành cho bạn.
+                        </p>
+                        
+                        <p>
+                            Mười lăm năm trước, tôi tốt nghiệp với đầu óc đầy những câu danh ngôn của Corbusier và 
+                            trái tim tràn đầy tham vọng. Tôi nghĩ kiến trúc là tạo ra những vật thể đẹp. Tôi đã sai. 
+                            Kiến trúc là tạo ra những trải nghiệm đẹp.
+                        </p>
+                        
+                        <div class="essay-insight">
+                            <h3>Về Thất Bại</h3>
+                            <p>
+                                Tòa nhà đầu tiên của bạn sẽ làm bạn thất vọng. Của tôi là một quán cà phê nhỏ không giống chút nào 
+                                với tầm nhìn của tôi. Khách hàng thay đổi tất cả. Nhà thầu cắt gót. Ngân sách tan biến. 
+                                Tôi đứng ngoài vào ngày khai trương, nhìn người ta cười và kết nối trong không gian 
+                                không hoàn hảo này, và tôi đã học được bài học quan trọng nhất: kiến trúc không phải là về bạn.
+                            </p>
+                        </div>
+                        
+                        <div class="essay-insight">
+                            <h3>Về Lắng Nghe</h3>
+                            <p>
+                                Hãy học cách lắng nghe sự yên lặng. Mỗi địa điểm đều có một câu chuyện. Mỗi khách hàng đều có 
+                                những giấc mơ họ không thể diễn đạt. Công việc của bạn là phiên dịch—biến những hy vọng 
+                                thầm thì thành hiện thực. Căn Hộ Vườn Trời không sinh ra từ sự sáng tạo của tôi; 
+                                nó sinh ra từ việc thực sự nghe thấy điều ai đó cần.
+                            </p>
+                        </div>
+                        
+                        <div class="essay-insight">
+                            <h3>Về Di Sản</h3>
+                            <p>
+                                Các tòa nhà sống lâu hơn chúng ta. Chúng trở thành bối cảnh cho những nụ hôn đầu tiên, 
+                                lời chào cuối cùng, những tách cà phê yên tĩnh buổi sáng và những cuộc trò chuyện thay đổi cuộc đời. 
+                                Bạn không chỉ đang thiết kế không gian—bạn đang thiết kế cái hộp chứa cảm xúc con người. 
+                                Hãy thiết kế có trách nhiệm.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="essay-sidebar">
+                        <div class="author-note">
+                            <h4>Về Tác Giả</h4>
+                            <p>
+                                Vũ Chí Thành đã dành 15 năm để học rằng những tòa nhà tốt nhất là 
+                                những tòa nhà khiến con người cảm thấy ín hơn. Studio của anh ở Thành phố Hồ Chí Minh 
+                                luôn mở cửa cho các kiến trúc sư trẻ tìm kiếm sự hướng dẫn.
+                            </p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h4>Liên Hệ</h4>
+                            <p>hello@vuchithanh.com</p>
+                            <p>+84 (0) 123 456 789</p>
+                            <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+        <footer class="magazine-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="magazine-details">
+                        <h3>Tạp chí KIẾN TRÚC SƯ</h3>
+                        <p>Xuân 2024 • Tập 15, Số 01</p>
+                        <p>Biên Niên Sử Vũ Chí Thành</p>
+                    </div>
+                    <div class="subscription-info">
+                        <p>Xuất bản bởi VCT Studio</p>
+                        <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+                        <p>© 2024 Bảo lưu toàn bộ quyền</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
