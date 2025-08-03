@@ -11,13 +11,13 @@
     <div class="magazine-wrapper">
         <header class="magazine-header">
             <div class="magazine-masthead">
-                <div class="issue-info">
+                <!-- <div class="issue-info">
                     <span class="volume">VOL. 15</span>
                     <span class="issue">ISSUE 01</span>
                     <span class="year">2024</span>
-                </div>
-                <h1 class="magazine-title">KIẾN TRÚC SƯ</h1>
-                <div class="subtitle">Biên Niên Sử Kiến Trúc</div>
+                </div> -->
+                <h1 class="magazine-title">VŨ CHÍ THÀNH</h1>
+                <div class="subtitle">Thiết Kế và Thi Công Xây Dựng</div>
             </div>
         </header>
 
@@ -33,8 +33,8 @@
                     </div>
                     <div class="cover-text">
                         <div class="story-meta">
-                            <span class="story-category">BÀI CHÍNH</span>
-                            <span class="page-number">TRANG 08</span>
+                            <span class="story-category">VỀ TÁC GIẢ</span>
+                            <!-- <span class="page-number">TRANG 08</span> -->
                         </div>
                         <h1 class="cover-headline">Thơ Ca Của Không Gian</h1>
                         <h2 class="cover-subhead">Cách Vũ Chí Thành biến đổi bê tông và thép thành những cảnh quan cảm xúc</h2>
@@ -52,15 +52,15 @@
                                 làm việc và mơ ước trong những bức tường đó."
                             </p>
                         </div>
-                        <div class="continue-reading">
+                        <!-- <div class="continue-reading">
                             <span>Tiếp tục đọc tại trang 12</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
 
             <!-- Table of Contents -->
-            <section class="table-of-contents">
+            <!-- <section class="table-of-contents">
                 <div class="toc-layout">
                     <div class="toc-header">
                         <h2>Trong Số Này</h2>
@@ -99,14 +99,14 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Feature Story 1: When Concrete Dreams -->
             <article class="feature-story" id="story-1">
                 <div class="story-header">
                     <div class="story-meta">
                         <span class="story-category">DỰ ÁN NỔI BẬT</span>
-                        <span class="page-number">TRANG 14</span>
+                        <!-- <span class="page-number">TRANG 14</span> -->
                     </div>
                     <h1 class="story-headline">Khi Bê Tông Mơ Ước</h1>
                     <h2 class="story-subhead">Căn Hộ Vườn Trời: Bức thư tình gửi cuộc sống thẳng đứng</h2>
@@ -190,11 +190,10 @@
             </article>
 
             <!-- Feature Story 2: The Heritage Whisperer -->
-            <article class="feature-story heritage-story" id="story-2">
+            <!-- <article class="feature-story heritage-story" id="story-2">
                 <div class="story-header">
                     <div class="story-meta">
                         <span class="story-category">BẢO TỒN VĂN HÓA</span>
-                        <span class="page-number">TRANG 28</span>
                     </div>
                     <h1 class="story-headline">Người Thầm Thủ Di Sản</h1>
                     <h2 class="story-subhead">Kiến trúc sư học cách nói chuyện với ma quỗ</h2>
@@ -242,286 +241,664 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </article>  -->
 
-            <!-- Featured Projects Showcase -->
+            <!-- Featured Projects Full-Page Showcase -->
             <section class="projects-showcase" id="projects">
-                <div class="projects-header">
-                    <div class="story-meta">
-                        <span class="story-category">DỰ ÁN NỔI BẬT</span>
-                        <span class="page-number">TRANG 32</span>
+                <!-- Project Navigation -->
+                <div class="project-navigation">
+                    <div class="project-dropdown">
+                        <button class="dropdown-toggle">
+                            <span class="current-project-name">Căn Hộ Vườn Trời</span>
+                            <span class="dropdown-icon">▼</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="project-nav-item active" data-project="0">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Căn Hộ Vườn Trời</span>
+                            </div>
+                            <div class="project-nav-item" data-project="1">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Trung Tâm Nghệ Thuật</span>
+                            </div>
+                            <div class="project-nav-item" data-project="2">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Quán Cà Phê Nổi</span>
+                            </div>
+                            <div class="project-nav-item" data-project="3">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Chùa Thiền Tre</span>
+                            </div>
+                            <div class="project-nav-item" data-project="4">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Nhà Phố Hiện Đại</span>
+                            </div>
+                            <div class="project-nav-item" data-project="5">
+                                <span class="nav-dot"></span>
+                                <span class="nav-label">Trung Tâm Cộng Đồng</span>
+                            </div>
+                        </div>
                     </div>
-                    <h1 class="projects-headline">Câu Chuyện Kiến Trúc</h1>
-                    <h2 class="projects-subhead">Nơi tầm nhìn gặp gỡ thực tế trong bê tông và giấc mơ</h2>
                 </div>
 
-                <div class="projects-grid">
-                    <!-- Project 1: Sky Gardens Residence -->
-                    <article class="project-card featured-project">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Căn Hộ Vườn Trời</span>
+                <!-- Project 1: Sky Gardens Residence -->
+                <div class="project-fullpage active" data-project="0">
+                    <!-- Carousel Banner -->
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Căn Hộ Vườn Trời - Toàn Cảnh</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Toàn Cảnh Kiến Trúc</h3>
+                                    <p class="photo-story">Tòa nhà hòa quyện hoàn hảo với thiên nhiên, tạo nên một tác phẩm kiến trúc xanh độc đáo. Những khu vườn treo được thiết kế khéo léo trên mỗi tầng, biến mỗi căn hộ thành một ốc đảo xanh giữa lòng thành phố.</p>
+                                </div>
                             </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Căn Hộ Vườn Trời</h3>
-                                    <p>Nơi cuộc sống đô thị gặp gỡ vòng tay thiên nhiên</p>
-                                    <span class="project-year">2024</span>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Khu Vườn Thẳng Đứng</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Vườn Thẳng Đứng</h3>
+                                    <p class="photo-story">Hệ thống vườn thẳng đứng không chỉ là điểm nhấn thẩm mỹ mà còn là giải pháp thông minh cho việc điều hòa không khí tự nhiên. Mỗi loại cây được chọn lọc kỹ lưỡng để phù hợp với điều kiện khí hậu và yêu cầu bảo trì.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Không Gian Nội Thất</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Thiết Kế Nội Thất</h3>
+                                    <p class="photo-story">Không gian nội thất được thiết kế mở, tận dụng tối đa ánh sáng tự nhiên từ khu vườn riêng. Việc sử dụng vật liệu gỗ tự nhiên và tông màu trung tính tạo cảm giác ấm cúng và gần gụi với thiên nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Ban Đêm Lung Linh</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Ánh Sáng Ban Đêm</h3>
+                                    <p class="photo-story">Hệ thống chiếu sáng được thiết kế tinh tế, tôn lên vẻ đẹp kiến trúc trong đêm. Ánh sáng LED ẩn trong các khu vườn tạo hiệu ứng lung linh, biến tòa nhà thành một tác phẩm nghệ thuật sống động.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Khu Dân Cư</span>
-                                <span class="project-location">Quận 1, TP.HCM</span>
-                            </div>
-                            <h3 class="project-title">Sống Giữa Mây Trời</h3>
-                            <p class="project-description">
-                                Một minh chứng 12 tầng cho việc làm vườn thẳng đứng, nơi mỗi căn hộ mở ra 
-                                ốc đảo riêng của mình. Dự án này thách thức thiết kế nhà cao tầng truyền thống 
-                                bằng cách tích hợp thiên nhiên ở mọi tầng, tạo ra một mặt tiền thở, sống động 
-                                thay đổi theo mùa.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">36</span>
-                                    <span class="highlight-label">Căn Hộ</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">48</span>
-                                    <span class="highlight-label">Khu Vườn</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">100%</span>
-                                    <span class="highlight-label">Năng Lượng Mặt Trời</span>
-                                </div>
-                            </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
                         </div>
-                    </article>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Căn Hộ Vườn Trời</h1>
+                            <p class="project-banner-subtitle">Sống Giữa Mây Trời</p>
+                        </div>
+                    </div>
 
-                    <!-- Project 2: Heritage Arts Center -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Trung Tâm Nghệ Thuật Di Sản</span>
+                    <!-- Project Info Section -->
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Khu Dân Cư</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">Quận 1, TP.HCM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Quy Mô</span>
+                                    <span class="meta-value">36 Căn Hộ</span>
+                                </div>
                             </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Trung Tâm Nghệ Thuật Di Sản</h3>
-                                    <p>Thổ hồn mới vào những bức tường cổ kính</p>
-                                    <span class="project-year">2023</span>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">36</div>
+                                    <div class="highlight-label">Căn Hộ</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">48</div>
+                                    <div class="highlight-label">Khu Vườn</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">100%</div>
+                                    <div class="highlight-label">Năng Lượng Xanh</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">12</div>
+                                    <div class="highlight-label">Tầng</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Phục Hồi Văn Hóa</span>
-                                <span class="project-location">Hội An</span>
-                            </div>
-                            <h3 class="project-title">Tiếng Thầm Thì Quá Khứ</h3>
-                            <p class="project-description">
-                                Ngôi nhà của thương gia lụa 200 năm tuổi được biến thành trung tâm nghệ thuật đương đại 
-                                trong khi vẫn bảo tồn từng chiết dầm phong sương và chi tiết chạm khắc. Việc phục hồi này 
-                                trở thành sự chiêm niệm về thời gian, nghề thủ công và những câu chuyện mà các tòa nhà đựng nên.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">200</span>
-                                    <span class="highlight-label">Năm Tuổi</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">3</span>
-                                    <span class="highlight-label">Năm Phục Hồi</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">15</span>
-                                    <span class="highlight-label">Thầy Thủ Công</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
 
-                    <!-- Project 3: Floating Café -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Quán Cà Phê Nổi Mê Kông</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Quán Cà Phê Nổi Mê Kông</h3>
-                                    <p>Kiến trúc chảy theo dòng sông</p>
-                                    <span class="project-year">2023</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Thương Mại</span>
-                                <span class="project-location">Cần Thơ</span>
-                            </div>
-                            <h3 class="project-title">Khúa Với Đồng Bằng</h3>
-                            <p class="project-description">
-                                Được xây trên cọc trên vòng tay Mê Kông, quán cà phê này lên xuống theo 
-                                tâm trạng của dòng sông. Tre và thép tạo ra cuộc đối thoại giữa truyền thống 
-                                và đổi mới, trong khi công trình thở theo lớp nước bên dưới.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">100%</span>
-                                    <span class="highlight-label">Bền Vững</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">150</span>
-                                    <span class="highlight-label">Sức Chứa</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">360°</span>
-                                    <span class="highlight-label">Tầm Nhìn Sông</span>
-                                </div>
+                    <!-- Project Story Section -->
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Khách hàng gọi điện vào một sáng thứ Ba năm 2023, giọng nói mang theo áp lực 
+                                    của những giấc mơ bất khả thi. "Tôi muốn sống trong một khu vườn," cô ấy nói, "nhưng tôi cần 
+                                    ở trong thành phố." Với hầu hết các kiến trúc sư, đây sẽ là một mâu thuẫn. Với Vũ Chí Thành, 
+                                    đó là một bức thư tình đang chờ được viết bằng bê tông và thép.
+                                </p>
+                                <blockquote class="story-quote">
+                                    "Mỗi giấc mơ bất khả thi chỉ là kiến trúc đang chờ được hiện thực"
+                                    <cite>— Vũ Chí Thành</cite>
+                                </blockquote>
+                                <p class="story-paragraph">
+                                    Căn Hộ Vườn Trời xuất hiện từ cuộc hội thoại này như chú phượng hoàng từ những 
+                                    ràng buộc đô thị. Thành đã dành nhiều tháng đi bộ qua khu đất chật hẹp, cảm nhận 
+                                    các dòng gió, quan sát cách ánh sáng di chuyển qua các tòa nhà lân cận. "Kiến trúc là 
+                                    việc lắng nghe," anh giải thích, "lắng nghe mảnh đất, những nhu cầu không nói ra của khách hàng, 
+                                    những tiếng thầm thì của khả năng."
+                                </p>
                             </div>
                         </div>
-                    </article>
-
-                    <!-- Project 4: Zen Meditation Center -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Trung Tâm Thiền Zen</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Trung Tâm Thiền Zen</h3>
-                                    <p>Kiến trúc là con đường đến bình an nội tâm</p>
-                                    <span class="project-year">2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Tâm Linh</span>
-                                <span class="project-location">Đà Lạt</span>
-                            </div>
-                            <h3 class="project-title">Sự Yên Lặng Trong Đá</h3>
-                            <p class="project-description">
-                                Nằm trong những dãy núi sương mù của Đà Lạt, trung tâm thiền này thể hiện sự thiền tĩnh 
-                                qua thiết kế tối giản. Mỗi đường nét, mỗi bóng râm, mỗi không gian giữa chúng nói lên 
-                                nhu cầu tĩnh lặng của tâm hồn trong thế giới hỗn loạn này.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">7</span>
-                                    <span class="highlight-label">Phòng Thiền</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">500</span>
-                                    <span class="highlight-label">Lượt Khách/Ngày</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">0</span>
-                                    <span class="highlight-label">Dấu Chân Carbon</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 5: Urban Market -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Chợ Trung Tâm Sài Gòn</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Chợ Trung Tâm Sài Gòn</h3>
-                                    <p>Nơi thương mại gặp gỡ cộng đồng</p>
-                                    <span class="project-year">2021</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Thương Mại</span>
-                                <span class="project-location">Quận 3, TP.HCM</span>
-                            </div>
-                            <h3 class="project-title">Trái Tim Thương Mại</h3>
-                            <p class="project-description">
-                                Một cách hiểu hiện đại về những khu chợ truyền thống Việt Nam, không gian này tôn vinh 
-                                năng lượng của thương mại đồng thời mang lại phẩm giá cho người bán hàng và sự tiện ích 
-                                cho khách hàng. Những đường mái chảy phản ánh sự hỗn loạn và vẻ đẹp của cuộc sống đường phố.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">200</span>
-                                    <span class="highlight-label">Gông Hàng</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">5000</span>
-                                    <span class="highlight-label">Khách/Ngày</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">24/7</span>
-                                    <span class="highlight-label">Hoạt Động</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 6: Tech Campus -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder project-img">
-                                <span>Trường Đại học Đổi Mới</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Trường Đại học Đổi Mới</h3>
-                                    <p>Nơi sáng tạo và công nghệ hội tụ</p>
-                                    <span class="project-year">2024</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-story">
-                            <div class="project-meta">
-                                <span class="project-type">Doanh Nghiệp</span>
-                                <span class="project-location">TP. Thủ Đức</span>
-                            </div>
-                            <h3 class="project-title">Tương Lai, Hiện Tại</h3>
-                            <p class="project-description">
-                                Một trường đại học công nghệ làm mờ nhạt ranh giới giữa công việc và cuộc sống, bên trong và 
-                                bên ngoài. Các không gian thích ứng chảy như thuật toán, tự định hình lại cho 
-                                sự hợp tác, tập trung và những khoảnh khắc đổi mới bất ngờ.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">50</span>
-                                    <span class="highlight-label">Công Ty</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">2000</span>
-                                    <span class="highlight-label">Nhân Viên</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">∞</span>
-                                    <span class="highlight-label">Khả Năng</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
 
-                <div class="projects-philosophy">
-                    <div class="philosophy-content">
-                        <h3>Kiến Trúc Của Câu Chuyện</h3>
-                        <p class="philosophy-text">
-                            Mỗi dự án kể một câu chuyện—không chỉ về vật liệu và phương pháp, mà về những giấc mơ được 
-                            thể hiện. Những tòa nhà này không chỉ đơn thuần chứa đựng các hoạt động; chúng nuôi dưỡng trải nghiệm, 
-                            thúc đẩy kết nối và tạo ra bối cảnh cho vô số câu chuyện con người chưa được triển khai.
-                        </p>
-                        <blockquote class="philosophy-quote">
-                            "Tôi không thiết kế tòa nhà. Tôi thiết kế những cái hộp chứa giấc mơ con người."
-                            <cite>— Vũ Chí Thành</cite>
-                        </blockquote>
+                <!-- Project 2: Heritage Arts Center -->
+                <div class="project-fullpage" data-project="1">
+                    <!-- Carousel Banner -->
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Trung Tâm Nghệ Thuật - Mặt Tiền</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Mặt Tiền Lịch Sử</h3>
+                                    <p class="photo-story">Công trình phục hồi tôn trọng kiến trúc gốc của tòa nhà 200 năm tuổi, đồng thời tích hợp các yếu tố hiện đại cần thiết. Mặt tiền được bảo tồn nguyên vẹn với những chi tiết chạm khắc tinh xảo của nghệ nhân xưa, tạo nên sự kết nối giữa quá khứ và hiện tại.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Kiến Trúc Cổ Kính</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Nghệ Thuật Cổ Truyền</h3>
+                                    <p class="photo-story">Những đường nét kiến trúc cổ điển được phục hồi tỉ mỉ bằng kỹ thuật truyền thống. Từng chi tiết được các nghệ nhân lão luyện thực hiện thủ công, sử dụng nguyên liệu và phương pháp tương tự như 200 năm trước, đảm bảo tính chân thực của di sản văn hóa.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Không Gian Triển Lãm</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Triển Lãm Hiện Đại</h3>
+                                    <p class="photo-story">Không gian bên trong được cải tạo để đáp ứng tiêu chuẩn triển lãm nghệ thuật hiện đại. Hệ thống chiếu sáng LED điều chỉnh được, kiểm soát nhiệt độ và độ ẩm chính xác, đồng thời vẫn giữ được vẻ đẹp kiến trúc cổ điển của không gian.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Chi Tiết Chạm Khắc</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Nghệ Thuật Chạm Khắc</h3>
+                                    <p class="photo-story">Những mảng chạm khắc tinh xảo trên gỗ và đá được phục hồi hoàn toàn, mỗi đường nét đều mang ý nghĩa văn hóa sâu sắc. Các nghệ nhân đã sử dụng công cụ truyền thống và mất hàng tháng để tái tạo những chi tiết bị hư hỏng bởi thời gian.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Trung Tâm Nghệ Thuật Di Sản</h1>
+                            <p class="project-banner-subtitle">Tiếng Thầm Thì Quá Khứ</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Info Section -->
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Phục Hồi Văn Hóa</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">Hội An</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2023</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Niên Đại</span>
+                                    <span class="meta-value">200 Năm Tuổi</span>
+                                </div>
+                            </div>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">200</div>
+                                    <div class="highlight-label">Năm Tuổi</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">3</div>
+                                    <div class="highlight-label">Năm Phục Hồi</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">15</div>
+                                    <div class="highlight-label">Thầy Thủ Công</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">5</div>
+                                    <div class="highlight-label">Phòng Triển Lãm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Story Section -->
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Trong trái tim Hội An, nơi những viên đá cổ nhớ những bước chân của thương gia lụa 
+                                    và thực dân Pháp, Vũ Chí Thành thực hiện một loại phép thuật. Anh lắng nghe các tòa nhà 
+                                    theo cách người khác nghe nhạc, nghe câu chuyện trong mỗi vết nứt, mỗi chiết dầm phong sương, 
+                                    mỗi vết sơn phai màu.
+                                </p>
+                                <blockquote class="story-quote">
+                                    "Phục hồi không phải là trở về quá khứ, đó là tạo ra cây cầu giữa hôm qua và ngày mai"
+                                    <cite>— Vũ Chí Thành</cite>
+                                </blockquote>
+                                <p class="story-paragraph">
+                                    Cách tiếp cận của anh với việc phục hồi Trung Tâm Nghệ Thuật Di Sản đã trở thành huyền thoại 
+                                    trong các vòng tầm bảo tồn. Nơi người khác thấy sự đổ nát, anh thấy tiềm năng. Nơi người khác 
+                                    muốn xây dựng lại, anh chọn chữa lành.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add remaining 4 projects with similar structure -->
+                <!-- Project 3: Mekong Floating Café -->
+                <div class="project-fullpage" data-project="2">
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Quán Cà Phê Nổi - Mặt Nước</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Kiến Trúc Nổi</h3>
+                                    <p class="photo-story">Quán cà phê được thiết kế để hòa hợp hoàn toàn với dòng chảy sông Mê Kông. Cấu trúc nổi bền vững được neo cố định nhưng vẫn cho phép tòa nhà di chuyển nhẹ nhàng theo nhịp sống của dòng sông, tạo cảm giác gần gũi với thiên nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Cấu Trúc Tre Thép</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Kết Hợp Tre Thép</h3>
+                                    <p class="photo-story">Sự kết hợp độc đáo giữa tre địa phương và khung thép hiện đại tạo nên một kiến trúc vừa bền vững, vừa thân thiện với môi trường. Tre được xử lý đặc biệt để chống nước và mối mọt, đồng thời khung thép được mạ kẽm chống gỉ.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Không Gian Bên Trong</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Nội Thất Mở</h3>
+                                    <p class="photo-story">Không gian bên trong được thiết kế hoàn toàn mở, với các cửa sổ lớn 360 độ để thực khách có thể thưởng thức cà phê vừa ngắm cảnh sông nước. Nội thất sử dụng chủ yếu gỗ và tre tự nhiên, tạo cảm giác ấm cúng và gần gũi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Quán Cà Phê Nổi Mê Kông</h1>
+                            <p class="project-banner-subtitle">Khúa Với Đồng Bằng</p>
+                        </div>
+                    </div>
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Thương Mại</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">Cần Thơ</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2023</span>
+                                </div>
+                            </div>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">100%</div>
+                                    <div class="highlight-label">Bền Vững</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">150</div>
+                                    <div class="highlight-label">Sức Chứa</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">360°</div>
+                                    <div class="highlight-label">Tầm Nhìn Sông</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Được xây trên cọc trên vòng tay Mê Kông, quán cà phê này lên xuống theo 
+                                    tâm trạng của dòng sông. Tre và thép tạo ra cuộc đối thoại giữa truyền thống 
+                                    và đổi mới, trong khi công trình thở theo lớp nước bên dưới.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Zen Meditation Center -->
+                <div class="project-fullpage" data-project="3">
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Trung Tâm Thiền - Toàn Cảnh</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Thiết Kế Zen</h3>
+                                    <p class="photo-story">Trung tâm thiền được thiết kế theo triết lý tối giản của Zen, với những đường nét đơn giản nhưng sâu sắc. Toàn bộ công trình sử dụng tre được chọn lọc và xử lý theo phương pháp truyền thống, tạo nên một không gian tĩnh lặng và thanh tịnh.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Phòng Thiền Chính</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Phòng Thiền Tịnh</h3>
+                                    <p class="photo-story">Không gian thiền chính được thiết kế với âm học hoàn hảo, mọi tiếng động từ bên ngoài đều được giảm thiểu. Ánh sáng tự nhiên lọc qua các tấm tre tạo nên hiệu ứng ánh sáng dịu nhẹ, giúp tâm trí tập trung và an nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Vườn Zen</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Vườn Thiền Nhật</h3>
+                                    <p class="photo-story">Vườn thiền được thiết kế theo phong cách Nhật Bản cổ điển với cát trắng, đá và cây cảnh được sắp xếp một cách cân bằng. Mỗi yếu tố trong vườn đều có ý nghĩa triết học sâu sắc, giúp người thiền tìm thấy sự bình an nội tâm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Trung Tâm Thiền Zen</h1>
+                            <p class="project-banner-subtitle">Sự Yên Lặng Trong Đá</p>
+                        </div>
+                    </div>
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Tâm Linh</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">Đà Lạt</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2022</span>
+                                </div>
+                            </div>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">7</div>
+                                    <div class="highlight-label">Phòng Thiền</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">500</div>
+                                    <div class="highlight-label">Khách/Ngày</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">0</div>
+                                    <div class="highlight-label">Dấu Chân Carbon</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Nằm trong những dãy núi sương mù của Đà Lạt, trung tâm thiền này thể hiện sự thiền tĩnh 
+                                    qua thiết kế tối giản. Mỗi đường nét, mỗi bóng râm, mỗi không gian giữa chúng nói lên 
+                                    nhu cầu tĩnh lặng của tâm hồn trong thế giới hỗn loạn này.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Saigon Central Market -->
+                <div class="project-fullpage" data-project="4">
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Chợ Trung Tâm - Mặt Tiền</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Nhà Phố Hiện Đại</h3>
+                                    <p class="photo-story">Thiết kế nhà phố 3 tầng kết hợp hoàn hảo giữa kiến trúc hiện đại và nhu cầu sống của gia đình Việt Nam. Mặt tiền được thiết kế với các tấm kính lớn và hệ thống che nắng thông minh, tạo sự cân bằng giữa riêng tư và mở.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Không Gian Bên Trong</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Không Gian Mở</h3>
+                                    <p class="photo-story">Không gian bên trong được thiết kế theo concept mở, kết nối liền mạch giữa phòng khách, bếp và khu vực ăn. Giếng trời ở giữa nhà đảm bảo ánh sáng tự nhiên chiếu sáng mọi tầng, đồng thời tạo luồng không khí tự nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Khu Vực Ẩm Thực</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Bếp Hiện Đại</h3>
+                                    <p class="photo-story">Khu vực bếp được thiết kế theo phong cách hiện đại với đảo bếp trung tâm và hệ thống tủ bếp tối ưu. Vật liệu cao cấp như đá granite và thép không gỉ kết hợp với ánh sáng LED tạo không gian nấu nướng lý tưởng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Chợ Trung Tâm Sài Gòn</h1>
+                            <p class="project-banner-subtitle">Trái Tim Thương Mại</p>
+                        </div>
+                    </div>
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Thương Mại</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">Quận 3, TP.HCM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2021</span>
+                                </div>
+                            </div>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">200</div>
+                                    <div class="highlight-label">Gian Hàng</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">5000</div>
+                                    <div class="highlight-label">Khách/Ngày</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">24/7</div>
+                                    <div class="highlight-label">Hoạt Động</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Một cách hiểu hiện đại về những khu chợ truyền thống Việt Nam, không gian này tôn vinh 
+                                    năng lượng của thương mại đồng thời mang lại phẩm giá cho người bán hàng và sự tiện ích 
+                                    cho khách hàng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Innovation Campus -->
+                <div class="project-fullpage" data-project="5">
+                    <div class="project-banner">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder banner-img">
+                                    <span>Trường Đại học - Toàn Cảnh</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Trung Tâm Cộng Đồng</h3>
+                                    <p class="photo-story">Trung tâm cộng đồng được thiết kế như một không gian mở, kết nối mọi người trong khu vực. Kiến trúc hiện đại với các khu vực xanh tích hợp, tạo môi trường học tập và làm việc lý tưởng cho cộng đồng địa phương.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Phòng Lab Công Nghệ</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Lab Công Nghệ</h3>
+                                    <p class="photo-story">Phòng lab được trang bị công nghệ tiên tiến với hệ thống điều hòa không khí chuyên dụng và ánh sáng LED không rung động. Không gian được thiết kế linh hoạt, có thể điều chỉnh để phù hợp với nhiều loại hoạt động nghiên cứu và đào tạo khác nhau.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder banner-img">
+                                    <span>Không Gian Làm Việc</span>
+                                </div>
+                                <div class="photo-description">
+                                    <h3 class="photo-title">Coworking Space</h3>
+                                    <p class="photo-story">Khu vực làm việc chung được thiết kế theo mô hình mở với các góc làm việc linh hoạt. Nội thất có thể di chuyển và sắp xếp lại dễ dàng, tạo điều kiện cho nhiều hình thức hợp tác và sáng tạo khác nhau của cộng đồng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">‹</button>
+                            <button class="carousel-btn carousel-next">›</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        <div class="project-banner-overlay">
+                            <h1 class="project-banner-title">Trường Đại học Đổi Mới</h1>
+                            <p class="project-banner-subtitle">Tương Lai, Hiện Tại</p>
+                        </div>
+                    </div>
+                    <div class="project-info-section">
+                        <div class="project-info-content">
+                            <div class="project-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Loại Dự Án</span>
+                                    <span class="meta-value">Doanh Nghiệp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Vị Trí</span>
+                                    <span class="meta-value">TP. Thủ Đức</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Hoàn Thành</span>
+                                    <span class="meta-value">2024</span>
+                                </div>
+                            </div>
+                            <div class="project-highlights-grid">
+                                <div class="highlight-card">
+                                    <div class="highlight-number">50</div>
+                                    <div class="highlight-label">Công Ty</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">2000</div>
+                                    <div class="highlight-label">Nhân Viên</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <div class="highlight-number">∞</div>
+                                    <div class="highlight-label">Khả Năng</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-story-section">
+                        <div class="story-container">
+                            <h2 class="story-title">Câu Chuyện Dự Án</h2>
+                            <div class="story-content">
+                                <p class="story-paragraph">
+                                    Một trường đại học công nghệ làm mờ nhạt ranh giới giữa công việc và cuộc sống, bên trong và 
+                                    bên ngoài. Các không gian thích ứng chảy như thuật toán, tự định hình lại cho 
+                                    sự hợp tác, tập trung và những khoảnh khắc đổi mới bất ngờ.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -531,7 +908,7 @@
                 <div class="essay-header">
                     <div class="story-meta">
                         <span class="story-category">TIỂU LUẬN CÁ NHÂN</span>
-                        <span class="page-number">TRANG 40</span>
+                        <!-- <span class="page-number">TRANG 40</span> -->
                     </div>
                     <h1 class="essay-headline">Thư Gửi Kiến Trúc Sư Trẻ</h1>
                     <h2 class="essay-subhead">Những điều tôi ước ai đó đã nói với tôi khi tốt nghiệp</h2>
@@ -604,18 +981,8 @@
         
         <footer class="magazine-footer">
             <div class="footer-content">
-                <div class="footer-info">
-                    <div class="magazine-details">
-                        <h3>Tạp chí KIẾN TRÚC SƯ</h3>
-                        <p>Xuân 2024 • Tập 15, Số 01</p>
-                        <p>Biên Niên Sử Vũ Chí Thành</p>
-                    </div>
-                    <div class="subscription-info">
-                        <p>Xuất bản bởi VCT Studio</p>
-                        <p>Thành phố Hồ Chí Minh, Việt Nam</p>
-                        <p>© 2024 Bảo lưu toàn bộ quyền</p>
-                    </div>
-                </div>
+                <p class="footer-quote">Sự giao thoa giữa quá khứ và đương đại</p>
+                <p class="footer-year">© 2025</p>
             </div>
         </footer>
     </div>

@@ -736,3 +736,241 @@ class MagazineFeatures {
 }
 
 const magazineFeatures = new MagazineFeatures();
+
+// Full-page projects with carousel functionality
+class ProjectShowcase {
+    constructor() {
+        this.currentProject = 0;
+        this.totalProjects = 6;
+        this.init();
+    }
+
+    init() {
+        this.setupCarousels();
+        this.setupProjectNavigation();
+        this.setupScrollTriggers();
+        this.showProject(0);
+    }
+
+    setupCarousels() {
+        document.querySelectorAll('.project-fullpage').forEach((project, projectIndex) => {
+            const carousel = project.querySelector('.carousel-container');
+            const slides = carousel ? carousel.querySelectorAll('.carousel-slide') : [];
+            const prevBtn = project.querySelector('.carousel-btn.carousel-prev');
+            const nextBtn = project.querySelector('.carousel-btn.carousel-next');
+            const indicators = project.querySelectorAll('.carousel-indicator');
+            
+            if (!carousel || slides.length === 0) {
+                return;
+            }
+            
+            let currentSlide = 0;
+            
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
+            };
+            
+            const nextSlide = () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            };
+            
+            const prevSlide = () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            };
+            
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+            
+            // Auto-advance carousel every 5 seconds
+            setInterval(nextSlide, 5000);
+        });
+    }
+
+    setupProjectNavigation() {
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const navItems = document.querySelectorAll('.project-nav-item');
+        const currentProjectName = document.querySelector('.current-project-name');
+        
+        // Toggle dropdown
+        dropdownToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdownToggle.classList.contains('open');
+            
+            if (isOpen) {
+                this.closeDropdown();
+            } else {
+                this.openDropdown();
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.project-dropdown')) {
+                this.closeDropdown();
+            }
+        });
+        
+        // Handle project selection
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                this.showProject(index);
+                this.closeDropdown();
+            });
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                this.showProject((this.currentProject - 1 + this.totalProjects) % this.totalProjects);
+            } else if (e.key === 'ArrowRight') {
+                this.showProject((this.currentProject + 1) % this.totalProjects);
+            } else if (e.key === 'Escape') {
+                this.closeDropdown();
+            }
+        });
+    }
+    
+    openDropdown() {
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        dropdownToggle.classList.add('open');
+        dropdownMenu.classList.add('open');
+    }
+    
+    closeDropdown() {
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        dropdownToggle.classList.remove('open');
+        dropdownMenu.classList.remove('open');
+    }
+
+    setupScrollTriggers() {
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const infoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Animate project details with stagger
+                    const details = entry.target.querySelectorAll('.project-detail');
+                    details.forEach((detail, index) => {
+                        setTimeout(() => {
+                            detail.style.opacity = '1';
+                            detail.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const storyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Animate story paragraphs with stagger
+                    const paragraphs = entry.target.querySelectorAll('p');
+                    paragraphs.forEach((p, index) => {
+                        setTimeout(() => {
+                            p.style.opacity = '1';
+                            p.style.transform = 'translateY(0)';
+                        }, index * 300);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all project info and story sections
+        document.querySelectorAll('.project-info-section').forEach(section => {
+            infoObserver.observe(section);
+        });
+        
+        document.querySelectorAll('.project-story-section').forEach(section => {
+            storyObserver.observe(section);
+        });
+    }
+
+    showProject(index) {
+        if (index === this.currentProject) return;
+        
+        const projects = document.querySelectorAll('.project-fullpage');
+        const navItems = document.querySelectorAll('.project-nav-item');
+        const currentProjectName = document.querySelector('.current-project-name');
+        
+        // Project names array
+        const projectNames = [
+            'Căn Hộ Vườn Trời',
+            'Trung Tâm Nghệ Thuật',
+            'Quán Cà Phê Nổi',
+            'Chùa Thiền Tre',
+            'Nhà Phố Hiện Đại',
+            'Trung Tâm Cộng Đồng'
+        ];
+        
+        // Hide current project
+        projects[this.currentProject].classList.remove('active');
+        navItems[this.currentProject].classList.remove('active');
+        
+        // Show new project with animation
+        setTimeout(() => {
+            projects[index].classList.add('active');
+            navItems[index].classList.add('active');
+            currentProjectName.textContent = projectNames[index];
+            this.currentProject = index;
+            
+            // Reset scroll positions for new project
+            const infoSection = projects[index].querySelector('.project-info-section');
+            const storySection = projects[index].querySelector('.project-story-section');
+            
+            if (infoSection) {
+                infoSection.style.opacity = '0';
+                infoSection.style.transform = 'translateY(50px)';
+            }
+            
+            if (storySection) {
+                storySection.style.opacity = '0';
+                storySection.style.transform = 'translateY(50px)';
+            }
+            
+            // Reset project details animation
+            const details = projects[index].querySelectorAll('.project-detail');
+            details.forEach(detail => {
+                detail.style.opacity = '0';
+                detail.style.transform = 'translateY(20px)';
+            });
+            
+            // Reset story paragraphs animation
+            const paragraphs = projects[index].querySelectorAll('.project-story-section p');
+            paragraphs.forEach(p => {
+                p.style.opacity = '0';
+                p.style.transform = 'translateY(20px)';
+            });
+        }, 300);
+    }
+}
+
+// Initialize project showcase
+const projectShowcase = new ProjectShowcase();
