@@ -688,6 +688,20 @@ p {
     .projects-headline {
         font-size: 2.5rem;
     }
+    
+    /* Project section improvements for tablets */
+    .carousel-slide {
+        grid-template-columns: 1fr 350px;
+    }
+    
+    .project-info-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .project-banner-title {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -868,7 +882,7 @@ p {
 .banner-img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    /* background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -876,6 +890,7 @@ p {
     font-size: 1.5rem;
     font-weight: 500;
     position: relative;
+    background-image: url("./assets/projects/biethudongnai/main.jpg");
 }
 
 .banner-img::before {
@@ -1955,7 +1970,7 @@ html {
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Mobile optimizations for project showcase */
+/* Improved mobile optimizations for project showcase */
 @media (max-width: 768px) {
     .project-navigation {
         top: 1rem;
@@ -1968,10 +1983,12 @@ html {
         min-width: auto;
         padding: 0.625rem 1rem;
         font-size: 0.8rem;
+        border-radius: 6px;
     }
     
     .dropdown-menu {
         max-height: 250px;
+        border-radius: 6px;
     }
     
     .project-nav-item {
@@ -1988,16 +2005,24 @@ html {
     }
     
     .project-banner {
-        height: 60vh;
+        height: 70vh;
+        min-height: 500px;
     }
     
     .carousel-slide {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+        gap: 0;
+    }
+    
+    .banner-img {
+        min-height: 300px;
+        background-size: cover !important;
+        background-position: center !important;
     }
     
     .photo-description {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.95);
         padding: 1.5rem;
         gap: 1rem;
         border-left: none;
@@ -2005,6 +2030,8 @@ html {
         transform: translateY(50px);
         position: relative;
         z-index: 10;
+        max-height: 200px;
+        overflow-y: auto;
     }
     
     .carousel-slide.active .photo-description {
@@ -2012,28 +2039,73 @@ html {
     }
     
     .photo-title {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding-bottom: 0.75rem;
     }
     
     .photo-story {
-        font-size: 0.9rem;
-        line-height: 1.6;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        text-align: left;
     }
     
-    .project-info-section,
+    .project-info-section {
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .project-info-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .project-meta-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .project-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .highlight-card {
+        padding: 1.5rem 1rem;
+    }
+    
     .project-story-section {
-        padding: 2rem 1.5rem;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .story-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .carousel-controls {
         bottom: 1rem;
         z-index: 100;
+        padding: 0 1rem;
     }
     
     .carousel-btn {
         width: 40px;
         height: 40px;
+        font-size: 1rem;
+    }
+    
+    .project-banner-overlay {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .project-banner-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .project-banner-subtitle {
         font-size: 1rem;
     }
 }
@@ -2048,14 +2120,17 @@ html {
     .dropdown-toggle {
         padding: 0.5rem 0.75rem;
         font-size: 0.75rem;
+        border-radius: 4px;
     }
     
     .current-project-name {
         text-transform: none;
+        font-size: 0.7rem;
     }
     
     .dropdown-menu {
         max-height: 200px;
+        border-radius: 4px;
     }
     
     .project-nav-item {
@@ -2063,21 +2138,150 @@ html {
     }
     
     .nav-label {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         text-transform: none;
+    }
+    
+    .project-banner {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .banner-img {
+        min-height: 250px;
     }
     
     .photo-description {
         padding: 1rem;
         gap: 0.75rem;
+        max-height: 150px;
     }
     
     .photo-title {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        padding-bottom: 0.5rem;
     }
     
     .photo-story {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .project-info-section,
+    .project-story-section {
+        padding: 2rem 1rem;
+    }
+    
+    .project-meta-info {
+        gap: 0.75rem;
+    }
+    
+    .meta-value {
+        font-size: 1.1rem;
+    }
+    
+    .project-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .highlight-card {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .highlight-number {
+        font-size: 2.5rem;
+    }
+    
+    .highlight-label {
+        font-size: 0.8rem;
+    }
+    
+    .story-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .project-banner-overlay {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .project-banner-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .project-banner-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 1.5rem;
+        gap: 0.5rem;
+    }
+    
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Touch and mobile interaction improvements */
+@media (max-width: 768px) {
+    /* Better touch targets */
+    .carousel-btn {
+        min-width: 44px;
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .carousel-indicator {
+        min-width: 44px;
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .dropdown-toggle {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .project-nav-item {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Prevent horizontal scroll */
+    .projects-showcase {
+        overflow-x: hidden;
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+    }
+    
+    /* Better scrolling for descriptions */
+    .photo-description {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Additional mobile-only improvements */
+@media (max-width: 480px) {
+    /* Ensure consistent spacing */
+    .project-fullpage {
+        padding: 0;
+    }
+    
+    /* Better image handling */
+    .banner-img {
+        background-attachment: scroll !important;
+    }
+    
+    /* Improved readability */
+    .story-content p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 }
 
