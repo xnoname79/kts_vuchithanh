@@ -573,6 +573,11 @@ const createMobileMenu = () => {
     const nav = document.querySelector('.nav');
     const navMenu = document.querySelector('.nav-menu');
     
+    // Only create mobile menu if nav elements exist
+    if (!nav || !navMenu) {
+        return;
+    }
+    
     // Create mobile menu button
     const mobileMenuBtn = document.createElement('button');
     mobileMenuBtn.classList.add('mobile-menu-btn');
@@ -741,7 +746,7 @@ const magazineFeatures = new MagazineFeatures();
 class ProjectShowcase {
     constructor() {
         this.currentProject = 0;
-        this.totalProjects = 6;
+        this.totalProjects = 5;
         this.init();
     }
 
@@ -796,7 +801,7 @@ class ProjectShowcase {
             });
             
             // Auto-advance carousel every 5 seconds
-            setInterval(nextSlide, 5000);
+            // setInterval(nextSlide, 5000);
         });
     }
 
@@ -922,12 +927,11 @@ class ProjectShowcase {
         
         // Project names array
         const projectNames = [
-            'Căn Hộ Vườn Trời',
-            'Trung Tâm Nghệ Thuật',
-            'Quán Cà Phê Nổi',
-            'Chùa Thiền Tre',
-            'Nhà Phố Hiện Đại',
-            'Trung Tâm Cộng Đồng'
+            'Ngũ Hành Sơn',
+            'Nhà Trong Núi',
+            'Quán Bar Kim Tự Tháp',
+            'Biệt Thự Đồng Nai',
+            'Phật Tổ nhập Niết Bàn',
         ];
         
         // Hide current project
@@ -974,3 +978,186 @@ class ProjectShowcase {
 
 // Initialize project showcase
 const projectShowcase = new ProjectShowcase();
+
+// Fullscreen Photo Modal functionality
+class PhotoModal {
+    constructor() {
+        this.modal = document.getElementById('photo-modal');
+        this.modalContainer = this.modal.querySelector('.modal-carousel-container');
+        this.modalIndicators = this.modal.querySelector('.modal-carousel-indicators');
+        this.modalTitle = this.modal.querySelector('.modal-photo-title');
+        this.modalDescription = this.modal.querySelector('.modal-photo-description');
+        this.closeBtn = this.modal.querySelector('.modal-close');
+        this.prevBtn = this.modal.querySelector('.modal-carousel-prev');
+        this.nextBtn = this.modal.querySelector('.modal-carousel-next');
+        this.backdrop = this.modal.querySelector('.modal-backdrop');
+        
+        this.currentSlide = 0;
+        this.slides = [];
+        this.slideData = [];
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        // Close modal events
+        this.closeBtn.addEventListener('click', () => this.closeModal());
+        this.backdrop.addEventListener('click', () => this.closeModal());
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (this.modal.classList.contains('show')) {
+                if (e.key === 'Escape') {
+                    this.closeModal();
+                } else if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                }
+            }
+        });
+        
+        // Carousel controls
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        // Setup click handlers for project banners
+        this.setupProjectBannerClicks();
+    }
+    
+    setupProjectBannerClicks() {
+        // Add click handlers to all project banners
+        document.querySelectorAll('.project-banner').forEach((banner, projectIndex) => {
+            banner.style.cursor = 'pointer';
+            banner.addEventListener('click', (e) => {
+                // Don't trigger if clicking on carousel controls
+                if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-indicator')) {
+                    return;
+                }
+                
+                this.openModal(projectIndex);
+            });
+        });
+    }
+    
+    openModal(projectIndex) {
+        const project = document.querySelectorAll('.project-fullpage')[projectIndex];
+        if (!project) return;
+        
+        const slides = project.querySelectorAll('.carousel-slide');
+        this.slideData = [];
+        
+        // Extract slide data
+        slides.forEach(slide => {
+            const img = slide.querySelector('.banner-img');
+            const title = slide.querySelector('.photo-title');
+            const description = slide.querySelector('.photo-story');
+            
+            if (img) {
+                const bgImage = img.style.backgroundImage;
+                const imageUrl = bgImage.slice(4, -1).replace(/"/g, "");
+                
+                this.slideData.push({
+                    imageUrl: imageUrl,
+                    title: title ? title.textContent : '',
+                    description: description ? description.textContent : ''
+                });
+            }
+        });
+        
+        if (this.slideData.length === 0) return;
+        
+        this.createModalSlides();
+        this.currentSlide = 0;
+        this.showSlide(0);
+        
+        // Show modal with animation
+        this.modal.style.display = 'flex';
+        setTimeout(() => {
+            this.modal.classList.add('show');
+        }, 10);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+    
+    createModalSlides() {
+        // Clear existing slides
+        this.modalContainer.innerHTML = '';
+        this.modalIndicators.innerHTML = '';
+        
+        // Create slides
+        this.slideData.forEach((data, index) => {
+            // Create slide
+            const slide = document.createElement('div');
+            slide.classList.add('modal-carousel-slide');
+            if (index === 0) slide.classList.add('active');
+            
+            const img = document.createElement('div');
+            img.classList.add('modal-banner-img');
+            img.style.backgroundImage = `url('${data.imageUrl}')`;
+            
+            slide.appendChild(img);
+            this.modalContainer.appendChild(slide);
+            
+            // Create indicator
+            const indicator = document.createElement('div');
+            indicator.classList.add('modal-carousel-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => this.showSlide(index));
+            
+            this.modalIndicators.appendChild(indicator);
+        });
+        
+        this.slides = this.modalContainer.querySelectorAll('.modal-carousel-slide');
+    }
+    
+    showSlide(index) {
+        if (index < 0 || index >= this.slideData.length) return;
+        
+        // Update slides
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        // Update indicators
+        const indicators = this.modalIndicators.querySelectorAll('.modal-carousel-indicator');
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+        
+        // Update text content
+        const data = this.slideData[index];
+        this.modalTitle.textContent = data.title;
+        this.modalDescription.textContent = data.description;
+        
+        this.currentSlide = index;
+    }
+    
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slideData.length;
+        this.showSlide(nextIndex);
+    }
+    
+    prevSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.slideData.length) % this.slideData.length;
+        this.showSlide(prevIndex);
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('show');
+        setTimeout(() => {
+            this.modal.style.display = 'none';
+        }, 300);
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }
+}
+
+// Initialize photo modal
+const photoModal = new PhotoModal();
